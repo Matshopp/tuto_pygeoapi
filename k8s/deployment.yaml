@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pygeoapi
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pygeoapi
+  template:
+    metadata:
+      labels:
+        app: pygeoapi
+    spec:
+      containers:
+      - name: pygeoapi
+        image: geopython/pygeoapi:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
