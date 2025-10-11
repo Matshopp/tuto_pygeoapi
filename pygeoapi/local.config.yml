@@ -64,8 +64,8 @@ logging:
 metadata:
     identification:
         title:
-            en: pygeoapi default instance
-            fr: instance par défaut de pygeoapi
+            en: pygeoapi OpenGeoShift
+            fr: OpenGeoShift pygeoapi
         description:
             en: pygeoapi provides an API to geospatial data
             fr: pygeoapi fournit une API aux données géospatiales
@@ -85,8 +85,8 @@ metadata:
         name: CC-BY 4.0 license
         url: https://creativecommons.org/licenses/by/4.0/
     provider:
-        name: Organization Name
-        url: https://pygeoapi.io
+        name: OpenGeoShift
+        url: https://opengeoshift.com/
     contact:
         name: OpenGeoShift
         position: GIS Engineer
@@ -97,8 +97,8 @@ metadata:
         country: France
         phone: +xx-xxx-xxx-xxxx
         fax: +xx-xxx-xxx-xxxx
-        email: you@example.org
-        url: Contact URL
+        email: contact@opengeoshift.com
+        url: https://opengeoshift.com/
         hours: Mo-Fr 08:00-17:00
         instructions: During hours of service. Off on weekends.
         role: pointOfContact
