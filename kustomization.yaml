@@ -1,3 +1,9 @@
 resources:
   - k8s/deployment.yaml
   - k8s/service.yaml
+  - k8s/ingress.yaml
+
+configMapGenerator:
+  - name: pygeoapi-config
+    files:
+      - pygeoapi/local.config.yml

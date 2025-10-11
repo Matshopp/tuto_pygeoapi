@@ -13,3 +13,4 @@ This is a tutorial on how to implement pygeoapi on a scalable architecture based
 - minikube dashboard --url
 - eval $(minikube -p minikube docker-env) --> point docker to minikube environment (so docker images are built inside minikube environment)
 - minikube tunnel --> routes traffic to the correct internal Kubernetes service
+- minikube addons enable ingress --> enable ingress

@@ -19,3 +19,11 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: config-volume
+          mountPath: /pygeoapi/local.config.yml
+          subPath: local.config.yml
+      volumes:
+      - name: config-volume
+        configMap:
+          name: pygeoapi-config
