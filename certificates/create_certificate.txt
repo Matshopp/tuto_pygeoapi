@@ -1,6 +1,13 @@
 cd /path/to/certificat_folder
 
 # create auto-signed certificate
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=pygeoapi.local/O=pygeoapi"
+openssl req -x509 -newkey rsa:2048 -nodes -keyout tls.key -out tls.crt -days 365 -subj "/CN=pygeoapi.local/O=pygeoapi" -addext "subjectAltName=DNS:pygeoapi.local"
+
 # register certiticat with kubernetes
 kubectl create secret tls pygeoapi-tls --key tls.key --cert tls.crt --namespace default
+
+# Add the certificate to the Trusted Root Certificates Store
+certutil -addstore "Root" "C:\path\to\tls.crt"
+
+# Remove certificate from the Trusted Root Certificates Store
+certutil -delstore "Root" "pygeoapi.local"
