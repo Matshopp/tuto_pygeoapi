@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pygeoapi
-        image: geopython/pygeoapi:latest
+        image: ogs-pygeoapi:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
@@ -23,6 +23,7 @@ spec:
         - name: config-volume
           mountPath: /pygeoapi/local.config.yml
           subPath: local.config.yml
+
       volumes:
       - name: config-volume
         configMap:
