@@ -1,4 +1,4 @@
-FROM geopython/pygeoapi:latest
+FROM geopython/pygeoapi:0.21.0
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends git \
